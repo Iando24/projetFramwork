@@ -18,9 +18,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('categorie_index') }}">back to list</a>
+    <button type="button" class="btn btn-info"><a href="{{ path('categorie_index') }}" class="text-white" style="text-decoration:none;" >Retour</a></button>
 
-    <a href="{{ path('categorie_edit', {'id': categorie.id}) }}">edit</a>
+    <button type="button" class="btn btn-warning"><a href="{{ path('categorie_edit', {'id': categorie.id}) }}" class="text-white" style="text-decoration:none;" >Modifier</a></button>
 
     {{ include('categorie/_delete_form.html.twig') }}
 {% endblock %}

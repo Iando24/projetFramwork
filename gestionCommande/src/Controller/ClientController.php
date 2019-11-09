@@ -26,6 +26,17 @@ class ClientController extends AbstractController
     }
 
     /**
+     * @Route("/",name="index")
+     *
+     */
+    public function home() {
+        return $this->render('client/home.html.twig');
+    }
+
+
+
+
+    /**
      * @Route("/new", name="client_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
@@ -91,4 +102,7 @@ class ClientController extends AbstractController
 
         return $this->redirectToRoute('client_index');
     }
+    
+
+
 }

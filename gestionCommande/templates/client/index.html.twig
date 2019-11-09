@@ -3,8 +3,9 @@
 {% block title %}Client index{% endblock %}
 
 {% block body %}
-    <h1>Client index</h1>
-
+    <br/><br/>
+    <button type="button" class="btn btn-success"><a href="{{ path('client_new') }}" class="text-white" style="text-decoration:none;" >Nouveau Client</a></button>
+    <br/><br/>
     <table class="table">
         <thead>
             <tr>
@@ -21,17 +22,15 @@
                 <td>{{ client.nom }}</td>
                 <td>{{ client.adresse }}</td>
                 <td>
-                    <a href="{{ path('client_show', {'id': client.id}) }}">show</a>
-                    <a href="{{ path('client_edit', {'id': client.id}) }}">edit</a>
+                    <button type="button" class="btn btn-info"><a href="{{ path('client_show', {'id': client.id}) }}" class="text-white" style="text-decoration:none;" >Plus</a></button>
+                    <button type="button" class="btn btn-danger"><a href="{{ path('client_edit', {'id': client.id}) }}" class="text-white" style="text-decoration:none;" >Modifier</a></button>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">Aucune donnée trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('client_new') }}">Create new</a>
 {% endblock %}

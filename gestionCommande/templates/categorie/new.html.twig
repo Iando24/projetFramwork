@@ -3,9 +3,12 @@
 {% block title %}New Categorie{% endblock %}
 
 {% block body %}
-    <h1>Create new Categorie</h1>
+    <br>
+    <br>
+    <h1>Création nouvelle Catégorie</h1>
 
     {{ include('categorie/_form.html.twig') }}
+                    
+    <button type="button" class="btn btn-info"><a href="{{ path('categorie_index') }}" class="text-white" style="text-decoration:none;" >Annuler</a></button>
 
-    <a href="{{ path('categorie_index') }}">back to list</a>
 {% endblock %}

@@ -3,8 +3,9 @@
 {% block title %}LigneCommande index{% endblock %}
 
 {% block body %}
-    <h1>LigneCommande index</h1>
-
+    <br/><br/>
+    <button type="button" class="btn btn-success"><a href="{{ path('ligne_commande_new') }}" class="text-white" style="text-decoration:none;" >Nouvelle LigneCommande</a></button>
+    <br/><br/>
     <table class="table">
         <thead>
             <tr>
@@ -23,8 +24,9 @@
                 <td>{{ ligne_commande.idProduit }}</td>
                 <td>{{ ligne_commande.qteCom }}</td>
                 <td>
-                    <a href="{{ path('ligne_commande_show', {'id': ligne_commande.id}) }}">show</a>
-                    <a href="{{ path('ligne_commande_edit', {'id': ligne_commande.id}) }}">edit</a>
+                    <button type="button" class="btn btn-info"><a href="{{ path('ligne_commande_show', {'id': ligne_commande.id}) }}" class="text-white" style="text-decoration:none;" >Plus</a></button>
+                    <button type="button" class="btn btn-danger"><a href="{{ path('ligne_commande_edit', {'id': ligne_commande.id}) }}" class="text-white" style="text-decoration:none;" >Modifier</a></button>
+
                 </td>
             </tr>
         {% else %}
@@ -35,5 +37,4 @@
         </tbody>
     </table>
 
-    <a href="{{ path('ligne_commande_new') }}">Create new</a>
 {% endblock %}

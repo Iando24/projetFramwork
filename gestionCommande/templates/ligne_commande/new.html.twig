@@ -3,9 +3,10 @@
 {% block title %}New LigneCommande{% endblock %}
 
 {% block body %}
-    <h1>Create new LigneCommande</h1>
+    <h1>Creation nouveau LigneCommande</h1>
 
     {{ include('ligne_commande/_form.html.twig') }}
 
-    <a href="{{ path('ligne_commande_index') }}">back to list</a>
+    <button type="button" class="btn btn-info"><a href="{{ path('ligne_commande_index') }}" class="text-white" style="text-decoration:none;" >Annuler</a></button>
+
 {% endblock %}

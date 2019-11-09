@@ -3,8 +3,9 @@
 {% block title %}Categorie index{% endblock %}
 
 {% block body %}
-    <h1>Categorie index</h1>
-
+    <br/><br/>
+    <button type="button" class="btn btn-success"><a href="{{ path('categorie_new') }}" class="text-white" style="text-decoration:none;" >Nouvelle Catégorie</a></button>
+    <br/><br/>
     <table class="table">
         <thead>
             <tr>
@@ -19,17 +20,17 @@
                 <td>{{ categorie.id }}</td>
                 <td>{{ categorie.libelle }}</td>
                 <td>
-                    <a href="{{ path('categorie_show', {'id': categorie.id}) }}">show</a>
-                    <a href="{{ path('categorie_edit', {'id': categorie.id}) }}">edit</a>
+                    <button type="button" class="btn btn-info"><a href="{{ path('categorie_show', {'id': categorie.id}) }}" class="text-white" style="text-decoration:none;" >Plus</a></button>
+                    <button type="button" class="btn btn-danger"><a href="{{ path('categorie_edit', {'id': categorie.id}) }}" class="text-white" style="text-decoration:none;" >Modifier</a></button>
+
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">Aucune donnée trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('categorie_new') }}">Create new</a>
 {% endblock %}

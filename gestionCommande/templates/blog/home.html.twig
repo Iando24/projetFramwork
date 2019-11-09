@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<br/><br/>
+<h1 class="text-center">{{ title }}</h1>
+<p class="text-center"> Notre équipe vous souhaite la Bienvenue ! </p>
+
+<br/><br/>
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+  <div class="card-header">Client</div>
+  <div class="card-body">
+    <h4 class="card-title">Gestion Client</h4>
+    <p class="card-text">Avec la fonctionnalité suivante: Ajout, Modification, Suppression du Client</p>
+  </div>
+</div>
+<div class="card text-white bg-danger mb-3" style="max-width: 20rem;position:absolute;top:39%;left:510px;">
+  <div class="card-header">Produit</div>
+  <div class="card-body">
+    <h4 class="card-title">Gestion Produit</h4>
+    <p class="card-text">Avec la fonctionnalité suivante: Ajout, Modification, Suppression du Produit</p>
+  </div>
+</div>
+<div class="card text-white bg-warning mb-3" style="max-width: 20rem;position:absolute;top:39%;left:66%;">
+  <div class="card-header">Commande</div>
+  <div class="card-body">
+    <h4 class="card-title">Gestion Commande</h4>
+    <p class="card-text">Avec la fonctionnalité suivante: Ajout, Modification, Suppression de Commande</p>
+  </div>
+</div>
+
+{% endblock %}
